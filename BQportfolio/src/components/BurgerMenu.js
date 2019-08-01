@@ -29,8 +29,7 @@ const ResponsiveNavStyles = styled(animated.div)`
   bottom: 0;
   background: ${colors.black};
   padding: 100px 2em 2em 2em;
-`;
-
+`
 
 const BurgerMenu = () => {
   const [isNavOpen, setNavOpen] = useState(false);
@@ -45,8 +44,6 @@ const BurgerMenu = () => {
   const bottomLine = useSpring({
     width: isNavOpen ? `16px` : `40px`,
   });
-
-
 
   return (
     <div>
@@ -66,7 +63,6 @@ const BurgerMenu = () => {
         )}
       </div>
     </div>
-
   )
 }
 
