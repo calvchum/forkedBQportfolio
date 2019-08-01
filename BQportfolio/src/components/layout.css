@@ -8,6 +8,17 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+@font-face {
+font-family: 'Georgia';
+src: url('../fonts/georgia/georgia.woff');
+}
+
+@font-face {
+  font-family: 'Avenir';
+  src: url('../fonts/avenir/AvenirLTStd-Book.otf'); /* IE9 Compat Modes */
+ }
+
+
 article,
 aside,
 details,
