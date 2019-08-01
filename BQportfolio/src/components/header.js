@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import React from "react"
 import styled from 'styled-components'
 import { HeaderText, colors } from '../utilities'
+import BurgerMenu from './BurgerMenu'
 
 const HeaderWrapper = styled.header`
   height: 110px;
@@ -17,7 +18,7 @@ const HeaderWrapper = styled.header`
 const Header = ({ siteTitle }) => (
   <HeaderWrapper>
     <HeaderText>Ben Quartermaine</HeaderText>
-
+    <BurgerMenu />
   </HeaderWrapper>
 )
 
