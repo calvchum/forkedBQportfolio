@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `BQ UI/UX`,
-    description: `Ben Quartermaine's personal site`,
+    description: `Ben Quartermaine's Portfolio`,
     author: `@benjaminquartermaine`,
   },
   plugins: [
