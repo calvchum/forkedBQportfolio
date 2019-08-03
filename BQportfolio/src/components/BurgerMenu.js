@@ -47,7 +47,11 @@ const BurgerMenu = ({ path }) => {
   })
   const bottomLine = useSpring({
     width: isNavOpen ? `16px` : `40px`,
+<<<<<<< HEAD
+  });
+=======
   })
+>>>>>>> 866dd0586174083038c3a2d9a34db2a6608d25a9
 
   return (
     <div>

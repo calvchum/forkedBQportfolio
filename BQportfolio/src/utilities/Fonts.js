@@ -1,6 +1,7 @@
-import styled from 'styled-components';
-import { Link } from "gatsby";
+import styled from 'styled-components'
+import { Link } from "gatsby"
 import { colors } from './Colors'
+import { media } from './Breakpoints'
 
 const fontsize = {
 	hero: '52px',
@@ -19,6 +20,15 @@ export const HeroText = styled.h1`
 	font-size: ${fontsize.hero};
 	color: ${props => props.color};
 	font-family: 'Avenir';
+`;
+
+export const HeroTextUnderlined = styled(HeroText)`
+	border-bottom: 2px solid ${colors.black};
+	margin: 0 auto;
+	max-width: 960px;
+	${media.med`
+		margin: 0em 1em;
+	`}
 `;
 
 export const HeaderText = styled.h1`
