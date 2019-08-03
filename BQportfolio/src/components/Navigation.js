@@ -27,11 +27,18 @@ const Navigation = ({ color, path }) => {
 		<NavigationWrapper>
 			{navArray.map((item, i) => {
 				return item.link === path ? (
-					<LinkText key={i} to={item.link}>
-						{`${item.title}<<<<`}{" "}
+					<LinkText 
+						style={{borderBottom: `2px solid ${colors.almostWhite}`}} 
+						key={i} 
+						to={item.link}
+					>
+						{`${item.title}`}{" "}
 					</LinkText>
 				) : (
-					<LinkText key={i} to={item.link}>
+					<LinkText 
+						key={i} 
+						to={item.link}
+					>
 						{" "}
 						{item.title}
 					</LinkText>
