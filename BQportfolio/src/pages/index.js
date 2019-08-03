@@ -4,8 +4,8 @@ import Layout from "../components/layout"
 import Image from "../components/image"
 import BurgerMenu from "../components/BurgerMenu"
 import SEO from "../components/seo"
-import { HeroText, colors } from '../utilities'
-import styled from 'styled-components'
+import { HeroText, colors } from "../utilities"
+import styled from "styled-components"
 
 const IndexWrapper = styled.div`
   height: 100vh;
@@ -14,9 +14,9 @@ const IndexWrapper = styled.div`
   padding: 2em;
   display: flex;
   justify-content: space-between;
-`;
+`
 
-const IndexPage = () => (
+const IndexPage = props => (
   <IndexWrapper>
     <div>
       <HeroText color={colors.almostWhite}>Ben Quartermaine</HeroText>
