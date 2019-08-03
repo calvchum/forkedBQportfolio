@@ -15,6 +15,7 @@ const ContentWrapper = styled.div`
 `
 
 
+<<<<<<< HEAD
 const About = () => (
   <Layout>
     <SEO title="About Page" />
@@ -26,6 +27,15 @@ const About = () => (
     </SectionWrapper>
     <Link to="/">Go back to the homepage</Link>
   </Layout>
+=======
+const About = props => (
+	<Layout props={props}>
+		<SEO title="Page two" />
+		<h1>Hi from the second page</h1>
+		<p>Welcome to page 2</p>
+		<Link to="/">Go back to the homepage</Link>
+	</Layout>
+>>>>>>> 866dd0586174083038c3a2d9a34db2a6608d25a9
 )
 
 export default About
