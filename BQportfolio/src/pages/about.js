@@ -1,41 +1,51 @@
 import React from "react"
 import { Link } from "gatsby"
-import { HeroTextUnderlined, BodyText } from '../utilities'
+import { HeroTextUnderlined, BodyText, media } from '../utilities'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import styled from 'styled-components'
+import { about } from '../assets/content'
 
 const SectionWrapper = styled.section`
-	
-	
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 3em 0em;
 `
 
 const ContentWrapper = styled.div`
-	max-width: 600px;
+	max-width: 700px;
+    margin-right: 0;
+    margin-left: auto;
+    padding-top: 3em;
+    
+    ${media.med`
+        margin: 0 3em;
+    `}
+
 `
 
-
-<<<<<<< HEAD
-const About = () => (
-  <Layout>
+const About = props => (
+  <Layout props={props}>
     <SEO title="About Page" />
     <SectionWrapper>
-    	<HeroTextUnderlined>About</HeroTextUnderlined>
+    	<HeroTextUnderlined>{about.title}</HeroTextUnderlined>
     	<ContentWrapper>
-    		<BodyText>Welcome to page 2 and how it is we're going to Welcome to page 2 and how it is we're going toWelcome to page 2 and how it is we're going toWelcome to page 2 and how it is we're going toWelcome to page 2 and how it is we're going toWelcome to page 2 and how it is we're going toWelcome to page 2 and how it is we're going to</BodyText>
+    		<BodyText>{about.content}</BodyText>
     	</ContentWrapper>
     </SectionWrapper>
-    <Link to="/">Go back to the homepage</Link>
+    <SectionWrapper>
+        <HeroTextUnderlined>{about.title}</HeroTextUnderlined>
+        <ContentWrapper>
+            <BodyText>{about.content}</BodyText>
+        </ContentWrapper>
+    </SectionWrapper>
+    <SectionWrapper>
+        <HeroTextUnderlined>{about.title}</HeroTextUnderlined>
+        <ContentWrapper>
+            <BodyText>{about.content}</BodyText>
+        </ContentWrapper>
+    </SectionWrapper>
   </Layout>
-=======
-const About = props => (
-	<Layout props={props}>
-		<SEO title="Page two" />
-		<h1>Hi from the second page</h1>
-		<p>Welcome to page 2</p>
-		<Link to="/">Go back to the homepage</Link>
-	</Layout>
->>>>>>> 866dd0586174083038c3a2d9a34db2a6608d25a9
 )
 
 export default About
