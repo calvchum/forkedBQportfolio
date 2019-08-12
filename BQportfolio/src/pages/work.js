@@ -1,19 +1,18 @@
 import React from "react"
 import { Link } from "gatsby"
-
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import ProjectCard from "../components/ProjectCard"
+import { HeroTextUnderlined } from '../utilities'
+import { wholefoods, ecze } from '../assets/content'
+
 
 const Work = props => {
 	return (
-		<>
-			<Layout props={props}>
-				<SEO title="Page two" />
-				<h1>Hi from the second page</h1>
-				<p>Welcome to page 2</p>
-				<Link to="/">Go back to the homepage</Link>
-			</Layout>
-		</>
+		<Layout props={ props }>
+			<HeroTextUnderlined>Work</HeroTextUnderlined>
+			<ProjectCard project={ wholefoods } />
+			<ProjectCard project={ ecze } />
+		</Layout>
 	)
 }
 

@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import { colors } from './Colors'
 import { media } from './Breakpoints'
 
-const fontsize = {
+export const fontsize = {
 	hero: '52px',
 	header: '36px',
 	body: '18px'
@@ -26,9 +26,6 @@ export const HeroTextUnderlined = styled(HeroText)`
 	border-bottom: 2px solid ${colors.black};
 	margin: 0 auto;
 	max-width: 960px;
-	${media.med`
-		margin: 0em 1em;
-	`}
 `;
 
 export const HeaderText = styled.h1`
@@ -47,12 +44,16 @@ export const BodyText = styled.p`
 export const LinkText = styled(Link)`
 	${presets}
 	font-family: 'Georgia';
-	font-size: ${fontsize.header};
+	font-size: ${fontsize.body};
 	margin: 0em;
 	list-style: none;
 	text-decoration: none;
 	transition: 0.2s;
 	padding: 8px;
+	& a {
+		color: ${colors.almostBlack};
+
+	}
 	&:hover {
 		cursor: pointer;
 		}	
