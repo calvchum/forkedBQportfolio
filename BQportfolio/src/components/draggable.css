@@ -1,0 +1,38 @@
+
+.content {
+  display: flex;
+  flex-direction: column;
+  cursor: hand;
+}
+.content > div {
+  height: 90px;
+  width: 100%;
+  overflow: visible;
+  pointer-events: auto;
+  transform-origin: 50% 50% 0px;
+  border-radius: 5px;
+  color: white;
+  line-height: 90px;
+  text-align: center;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.content > div:nth-child(1) {
+  background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+}
+.content > div:nth-child(2) {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+.content > div:nth-child(3) {
+  background: linear-gradient(135deg, #5ee7df 0%, #b490ca 100%);
+}
+.content > div:nth-child(4) {
+  background: linear-gradient(135deg, #c3cfe2 0%, #c3cfe2 100%);
+}
+.content > div:nth-child(5) {
+  background: linear-gradient(135deg, #c3cfe2 0%, #c3cfe2 100%);
+}
+.content > div:nth-child(6) {
+  background: linear-gradient(135deg, #c3cfe2 0%, #c3cfe2 100%);
+}

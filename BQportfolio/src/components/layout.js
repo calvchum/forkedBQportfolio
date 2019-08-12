@@ -19,7 +19,7 @@ const Layout = ({ children, props }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} path={props.path} />
-      <main>{children}</main>
+      <main style={{margin: '16px'}}>{children}</main>
       <Footer />
     </>
   )

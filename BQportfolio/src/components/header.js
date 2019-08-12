@@ -16,11 +16,15 @@ const HeaderWrapper = styled.header`
   background: ${colors.black};
 `;
 
-const Header = ({ siteTitle, path }) => (
-  <HeaderWrapper>
-    <HeaderText>Ben Quartermaine</HeaderText>
-    <BurgerMenu path={path} />
-  </HeaderWrapper>
-)
+
+const Header = ({ path }) => {
+  return (
+    <HeaderWrapper>
+      <HeaderText>BQ</HeaderText>
+      <BurgerMenu path={path} />
+    </HeaderWrapper>
+  )
+}
+
 
 export default Header

@@ -1,4 +1,3 @@
-// import { Link } from "gatsby"
 import React from "react"
 import { BodyText, LinkText, colors } from '../utilities';
 import styled from 'styled-components';
