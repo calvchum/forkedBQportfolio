@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 import Image from "../components/image"
 import BurgerMenu from "../components/BurgerMenu"
 import SEO from "../components/seo"
-import { HeroText, colors } from "../utilities"
+import { HeroText, colors, media } from "../utilities"
 import styled from "styled-components"
 
 const IndexWrapper = styled.div`
@@ -14,6 +14,14 @@ const IndexWrapper = styled.div`
   padding: 2em;
   display: flex;
   justify-content: space-between;
+  
+  ${media.small`
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: flex-end;
+  `}
+
 `
 
 const IndexPage = props => (

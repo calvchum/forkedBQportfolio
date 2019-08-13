@@ -23,7 +23,6 @@ const Navigation = ({ color, path }) => {
 		{ title: "Home", link: "/" },
 		{ title: "Work", link: "/work/" },
 		{ title: "About", link: "/about/" },
-		{ title: "Process", link: "/process/" },
 	]
 
 	return (

@@ -20,6 +20,10 @@ export const HeroText = styled.h1`
 	font-size: ${fontsize.hero};
 	color: ${props => props.color};
 	font-family: 'Avenir';
+
+	${media.small`
+		font-size: ${fontsize.header};
+	`}
 `;
 
 export const HeroTextUnderlined = styled(HeroText)`
