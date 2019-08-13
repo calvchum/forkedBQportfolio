@@ -14,10 +14,6 @@ const Navigation = ({ color, path }) => {
 			font-size: ${fontsize.header};
 			color: ${color};
 			border-bottom: 2px solid ${colors.black};
-			${media.med`
-				text-align: center;
-			`}
-
 			&:hover {
 				border-bottom: 2px solid ${colors.almostWhite};
 			}

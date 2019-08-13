@@ -11,11 +11,7 @@ const BurgerWrapper = styled.div`
   z-index: 1;
 `
 const Span = styled(animated.div)`
-  style= {
-     {
-      zindex: 1;
-    }
-  }
+  z-index: 1;
   display: flex;
   flex-direction: column;
   width: 40px;
@@ -26,21 +22,29 @@ const Span = styled(animated.div)`
 
 const ResponsiveNavStyles = styled(animated.div)`
   position: fixed;
-  left: 0;
   right: 0;
   top: 0;
   bottom: 0;
+  width: 400px;
   background: ${colors.black};
   padding: 100px 2em 2em 2em;
+
+  ${media.med`
+    width: 70%;
+  `}
+
+  ${media.small`
+    width: 100%;
+  `}
 `
 
 const BurgerMenu = ({ path }) => {
   const [currentPath, setPath] = useState(path)
   const [isNavOpen, setNavOpen] = useState(false)
   const navAnimation = useTransition(isNavOpen, null, {
-    from: { transform: `translate3d(-100%,0,0)` },
+    from: { transform: `translate3d(100%,0,0)` },
     enter: { transform: `translate3d(0,0,0)` },
-    leave: { transform: `translate3d(-100%,0,0)` },
+    leave: { transform: `translate3d(100%,0,0)` },
   })
   const middleLine = useSpring({
     width: isNavOpen ? `32px` : `40px`,

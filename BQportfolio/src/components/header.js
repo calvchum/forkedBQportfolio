@@ -14,13 +14,18 @@ const HeaderWrapper = styled.header`
   padding: 0em 2em;
   color: ${colors.almostWhite};
   background: ${colors.black};
+
+  & a {
+    text-decoration: none;
+    color: ${colors.almostWhite};
+  }
 `;
 
 
 const Header = ({ path }) => {
   return (
     <HeaderWrapper>
-      <HeaderText>BQ</HeaderText>
+      <HeaderText><Link to="/">BQ</Link></HeaderText>
       <BurgerMenu path={path} />
     </HeaderWrapper>
   )

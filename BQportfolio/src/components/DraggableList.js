@@ -9,8 +9,8 @@ import './draggable.css'
 // Returns fitting styles for dragged/idle items
 const fn = (order, down, originalIndex, curIndex, y) => index =>
   down && index === originalIndex
-    ? { y: curIndex * 1200 + y, scale: 1.1, zIndex: '1', shadow: 15, immediate: n => n === 'y' || n === 'zIndex' }
-    : { y: order.indexOf(index) * 100, scale: 1, zIndex: '0', shadow: 1, immediate: false }
+    ? { y: curIndex * 100 + y, scale: 1.1, zIndex: '1', shadow: 15, immediate: n => n === 'y' || n === 'zIndex' }
+    : { y: order.indexOf(index) , scale: 1, zIndex: '0', shadow: 1, immediate: false }
 
  const DraggableList = ({ items }) => {
   const order = useRef(items.map((_, index) => index)) // Store indicies as a local ref, this represents the item order

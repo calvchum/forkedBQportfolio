@@ -50,10 +50,7 @@ export const LinkText = styled(Link)`
 	text-decoration: none;
 	transition: 0.2s;
 	padding: 8px;
-	& a {
-		color: ${colors.almostBlack};
-
-	}
+	color: ${colors.black};
 	&:hover {
 		cursor: pointer;
 		}	

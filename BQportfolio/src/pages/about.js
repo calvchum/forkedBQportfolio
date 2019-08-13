@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import { HeroTextUnderlined, BodyText, media } from '../utilities'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import IconGrid from "../components/IconGrid"
 import styled from 'styled-components'
 import { about } from '../assets/content'
 
@@ -19,7 +20,7 @@ const ContentWrapper = styled.div`
     padding-top: 3em;
     
     ${media.med`
-        margin: 0 3em;
+        margin: 0 1em;
     `}
 
 `
@@ -34,9 +35,9 @@ const About = props => (
     	</ContentWrapper>
     </SectionWrapper>
     <SectionWrapper>
-        <HeroTextUnderlined>{about.title}</HeroTextUnderlined>
+        <HeroTextUnderlined>Tools</HeroTextUnderlined>
         <ContentWrapper>
-            <BodyText>{about.content}</BodyText>
+            <IconGrid />
         </ContentWrapper>
     </SectionWrapper>
     <SectionWrapper>
