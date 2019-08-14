@@ -8,10 +8,10 @@ import { paddingDefaults, colors, media } from "../utilities"
 const BurgerWrapper = styled.div`
   position: relative;
   cursor: pointer;
-  z-index: 1;
+  z-index: 6;
 `
 const Span = styled(animated.div)`
-  z-index: 1;
+  z-index: 6;
   display: flex;
   flex-direction: column;
   width: 40px;
