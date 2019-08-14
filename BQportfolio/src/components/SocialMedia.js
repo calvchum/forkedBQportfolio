@@ -5,7 +5,6 @@ import { socialIcons } from '../assets/content.js'
 
 const IconWrapper = styled.div`
 	display: flex;
-
 `;
 
 const Icon = styled.div`
@@ -18,8 +17,6 @@ const Icon = styled.div`
 		margin-left: 0px;
 	}
 `;
-
-
 
 const SocialMedia = () => (
   <IconWrapper>

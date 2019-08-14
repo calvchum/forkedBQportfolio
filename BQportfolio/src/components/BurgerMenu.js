@@ -21,6 +21,7 @@ const Span = styled(animated.div)`
 `
 
 const ResponsiveNavStyles = styled(animated.div)`
+  z-index: 5;
   position: fixed;
   right: 0;
   top: 0;
@@ -28,11 +29,9 @@ const ResponsiveNavStyles = styled(animated.div)`
   width: 400px;
   background: ${colors.black};
   padding: 100px 2em 2em 2em;
-
   ${media.med`
     width: 70%;
   `}
-
   ${media.small`
     width: 100%;
   `}

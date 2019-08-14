@@ -12,7 +12,7 @@ const CardWrapper = styled.div`
 `
 
 const CardHeader = styled.div`
-	& div:first-child {
+	& p:first-child {
 		display: flex;
 		justify-content: flex-end;
 		padding-bottom: 8px;
@@ -26,22 +26,6 @@ const CardContent = styled.div`
 	}
 `
 
-const ImageContainer = styled.div`
-	display: grid;
-	grid-gap: 16px;
-	margin: 0 auto;
-	grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
-
-	${media.med`
-		& div:first-child {
-			display: none;
-		}
-		& div:last-child {
-			display: none;
-		}
-	`}
-`
-
 const Image = styled.div`
 	height: 300px;
 	width: 100%;
@@ -52,9 +36,8 @@ const HeaderSubheader = styled.div`
 	padding-bottom: 16px;
 `
 
-const LinkWrapper = styled.div`
+const LinkWrapper = styled(animated.div)`
 	padding-top: 16px;
-
 	& a { 
 		display: flex;
 		align-items: center;
@@ -65,44 +48,37 @@ const LinkWrapper = styled.div`
 		height: 25px;
 	}
 
-	&:hover {
-		transition: all 0.3s;
-		transform: scale3d(1.02, 1.02, 1.02);
-		transform: translate3d(5px, -5px, 0px);
-	}
+
 `
 
-const ProjectCard = ({ project }) => (
-
-
-  <CardWrapper>
-	  <CardHeader>
-		  <div>
-		  	<BodyText>{project.date}</BodyText>
-		  </div>
-		  <HeaderSubheader>
-			  <HeaderText>{project.title}</HeaderText>
-			  <BodyText>{project.description}</BodyText>
-		  </HeaderSubheader>
-		 </CardHeader>
-		 <CardContent>
-			  <ImageContainer>
-			  	<Image style={{backgroundImage: `url(${project.imageOne})`}}></Image>
-			  	<Image style={{backgroundImage: `url(${project.imageTwo})`}}></Image>
-			  	<Image style={{backgroundImage: `url(${project.imageThree})`}}></Image>
-			  </ImageContainer>
-
-			{/* Going to add animation on hover of button*/}
-			  <animated.div>
-				  <LinkWrapper>
-				  	<LinkText style={{textDecoration: 'underline'}}>
-				  	{project.link}	
-				  		<img src={diagonalArrow} alt=""/>
-				  	</LinkText>
-				  </LinkWrapper>
-			  </animated.div>
-		 </CardContent>
-  </CardWrapper>
-)
+const ProjectCard = ({ project }) => {
+		 const [isHovered, setHovered] = useState(false);
+		 const buttonAnimation = useSpring({ transform: isHovered ? `translate3d(10px, -5px, 0px)` : `translate3d(0px, 0px, 0px)` })
+	 
+	  return (
+	  <CardWrapper>
+		  <CardHeader>
+			  <BodyText>{project.date}</BodyText>
+			  <HeaderSubheader>
+				  <HeaderText>{project.title}</HeaderText>
+				  <BodyText>{project.description}</BodyText>
+			  </HeaderSubheader>
+			 </CardHeader>
+			 <CardContent>
+				<Image style={{backgroundImage: `url(${project.imageOne})`}}></Image>
+			  <LinkWrapper
+	     	 	style={buttonAnimation}
+	     	 	onMouseEnter={() => setHovered(true)}
+	     	 	onMouseLeave={() => setHovered(false)}
+			  >
+			  	<LinkText style={{textDecoration: 'underline'}}>
+			  	{project.link}	
+			  		<img src={diagonalArrow} alt=""/>
+			  	</LinkText>
+			  </LinkWrapper>
+			 </CardContent>
+	  </CardWrapper>
+	)
+}
 
 export default ProjectCard

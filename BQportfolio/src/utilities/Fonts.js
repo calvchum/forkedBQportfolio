@@ -30,6 +30,7 @@ export const HeroTextUnderlined = styled(HeroText)`
 	border-bottom: 2px solid ${colors.black};
 	margin: 0 auto;
 	max-width: 960px;
+	padding-top: 32px;
 `;
 
 export const HeaderText = styled.h1`

@@ -4,8 +4,11 @@ import Layout from "../components/layout"
 import Image from "../components/image"
 import BurgerMenu from "../components/BurgerMenu"
 import SEO from "../components/seo"
+import LandingText from "../components/LandingText"
+import VideoBackground from "../components/VideoBackground"
 import { HeroText, colors, media } from "../utilities"
 import styled from "styled-components"
+
 
 const IndexWrapper = styled.div`
   height: 100vh;
@@ -26,12 +29,9 @@ const IndexWrapper = styled.div`
 
 const IndexPage = props => (
   <IndexWrapper>
-    <div>
-      <HeroText color={colors.almostWhite}>Ben Quartermaine</HeroText>
-      <HeroText color={colors.almostWhite}>UX Designer</HeroText>
-      <HeroText color={colors.almostWhite}>Melbourne, Australia</HeroText>
-    </div>
-    <BurgerMenu />
+    <LandingText />
+    <BurgerMenu path={ props.path } />
+    <VideoBackground />
   </IndexWrapper>
 )
 

@@ -11,14 +11,17 @@ const HeaderWrapper = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0em 2em;
+  padding: 0em 32px;
   color: ${colors.almostWhite};
   background: ${colors.black};
-
   & a {
     text-decoration: none;
     color: ${colors.almostWhite};
   }
+  ${media.med`
+    padding: 0em 16px;
+
+  `}
 `;
 
 

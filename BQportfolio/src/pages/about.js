@@ -11,7 +11,7 @@ import { about, problems } from '../assets/content'
 const SectionWrapper = styled.section`
   max-width: 700px;
   margin: 0 auto;
-  padding: 3em 0em;
+  padding-bottom: 3em;
 `
 
 const ContentWrapper = styled.div`
