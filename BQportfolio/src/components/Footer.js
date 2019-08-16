@@ -1,5 +1,5 @@
 import React from "react"
-import { BodyText, LinkText, colors } from '../utilities';
+import { BodyText, colors } from '../utilities';
 import styled from 'styled-components';
 
 const FooterWrapper = styled.footer`

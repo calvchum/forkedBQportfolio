@@ -1,9 +1,8 @@
 import React, { useState } from "react"
 import { useSpring, useTransition, animated } from "react-spring"
-import { Link } from "gatsby"
 import styled from "styled-components"
 import Navigation from "./Navigation"
-import { paddingDefaults, colors, media } from "../utilities"
+import { colors, media } from "../utilities"
 
 const BurgerWrapper = styled.div`
   position: relative;
@@ -38,7 +37,7 @@ const ResponsiveNavStyles = styled(animated.div)`
 `
 
 const BurgerMenu = ({ path }) => {
-  const [currentPath, setPath] = useState(path)
+  const [currentPath] = useState(path)
   const [isNavOpen, setNavOpen] = useState(false)
   const navAnimation = useTransition(isNavOpen, null, {
     from: { transform: `translate3d(100%,0,0)` },

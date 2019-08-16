@@ -1,5 +1,4 @@
 import React from "react"
-import { BodyText, LinkText, colors } from '../utilities';
 import styled from 'styled-components';
 import { socialIcons } from '../assets/content.js'
 
@@ -12,7 +11,6 @@ const Icon = styled.div`
 	width: 50px;
 	background-size: cover;
 	margin: 8px;
-
 	&:first-child {
 		margin-left: 0px;
 	}
@@ -20,7 +18,7 @@ const Icon = styled.div`
 
 const SocialMedia = () => (
   <IconWrapper>
-  	{socialIcons.map(icon => <Icon style={{backgroundImage: `url(${icon})`}}/>)}
+  	{socialIcons.map((icon, key) => <Icon key={key} style={{backgroundImage: `url(${icon})`}}/>)}
   </IconWrapper>
 )
 

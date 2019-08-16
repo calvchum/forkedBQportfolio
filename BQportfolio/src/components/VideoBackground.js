@@ -1,5 +1,4 @@
 import React from "react"
-import { BodyText, LinkText, colors } from '../utilities';
 import styled from 'styled-components';
 import iteration from '../assets/iteration.mp4'
 

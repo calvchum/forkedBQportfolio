@@ -1,16 +1,13 @@
 import React from "react"
-import { useSpring, animated } from 'react-spring'
 import styled from 'styled-components'
-import { about, tools } from '../assets/content'
+import { tools } from '../assets/content'
 import './layout.css'
-
 
 const IconWrapper = styled.div`
     display: grid;
     grid-template-columns: repeat( auto-fit, minmax(130px, 1fr) );
     grid-gap: 16px;
 `
-
 const Icon = styled.div`
     width: 130px;
     height: 130px;
@@ -24,7 +21,7 @@ const Icon = styled.div`
 const IconGrid = () => {
   return (
     <IconWrapper>
-        {tools.map(tool => <Icon style={{ backgroundImage: `url(${tool})`}} />)}
+        {tools.map((tool, key) => <Icon key={key} style={{ backgroundImage: `url(${tool})`}} />)}
     </IconWrapper>
   )
 }

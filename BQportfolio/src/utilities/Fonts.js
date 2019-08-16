@@ -62,3 +62,20 @@ export const LinkText = styled(Link)`
 	}
 `;
 
+// NON GATSBY LINK TEXT
+export const LinkTextStyle = styled.p`
+	${presets}
+	font-family: 'Georgia';
+	font-size: ${fontsize.body};
+	margin: 0em;
+	list-style: none;
+	text-decoration: none;
+	transition: 0.2s;
+	padding: 8px;
+	color: ${colors.black};
+	&:hover {
+		cursor: pointer;
+		}	
+	}
+`;
+

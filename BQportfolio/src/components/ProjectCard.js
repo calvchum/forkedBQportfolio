@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { BodyText, HeaderText, LinkText, colors, media } from '../utilities';
+import { BodyText, HeaderText, LinkTextStyle } from '../utilities';
 import styled from 'styled-components';
 import diagonalArrow from '../assets/portfolio-icons/diagonal-arrow.svg'
 import { animated, useSpring } from 'react-spring'
@@ -33,7 +33,7 @@ const HeaderSubheader = styled.div`
 `
 const LinkWrapper = styled(animated.div)`
 	padding-top: 16px;
-	& a { 
+	& p { 
 		display: flex;
 		align-items: center;
 		padding: 0px;
@@ -64,10 +64,10 @@ const ProjectCard = ({ project }) => {
 	     	 	onMouseEnter={() => setHovered(true)}
 	     	 	onMouseLeave={() => setHovered(false)}
 			  >
-			  	<LinkText style={{textDecoration: 'underline'}}>
+			  	<LinkTextStyle style={{textDecoration: 'underline'}}>
 			  	{project.link}	
 			  		<img src={diagonalArrow} alt=""/>
-			  	</LinkText>
+			  	</LinkTextStyle>
 			  </LinkWrapper>
 			 </CardContent>
 	  </CardWrapper>

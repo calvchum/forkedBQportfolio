@@ -1,6 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
-import { HeroTextUnderlined, BodyText, media } from '../utilities'
+import { HeroTextUnderlined, BodyText } from '../utilities'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import IconGrid from "../components/IconGrid"
@@ -13,16 +12,13 @@ const SectionWrapper = styled.section`
   margin: 0 auto;
   padding-bottom: 3em;
 `
-
 const ContentWrapper = styled.div`
   padding-top: 2em;
   
 `
-
 const ProblemList = styled.div`
   padding: 16px 0px;
 `
-
 const About = props => (
   <Layout props={props}>
     <SEO title="About Page" />
@@ -44,7 +40,7 @@ const About = props => (
         <BodyText>{problems.introduction}</BodyText>
             <ProblemList>
               <ul>
-                  {problems.content.map(problem => <li><BodyText>{problem}</BodyText></li>)}
+                  {problems.content.map((problem, key) => <li key={key}><BodyText>{problem}</BodyText></li>)}
               </ul>
             </ProblemList>
         </ContentWrapper>

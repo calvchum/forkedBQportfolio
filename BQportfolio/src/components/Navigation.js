@@ -1,8 +1,6 @@
-import { Link } from "gatsby"
-import React, { useState } from "react"
+import React from "react"
 import styled from "styled-components"
-import { useSpring, animated } from 'react-spring'
-import { LinkText, colors, fontsize, media } from "../utilities"
+import { LinkText, colors, fontsize } from "../utilities"
 
 const Navigation = ({ color, path }) => {
 	const NavigationWrapper = styled.div`
@@ -20,10 +18,6 @@ const Navigation = ({ color, path }) => {
 				border-bottom: 2px solid ${colors.almostWhite};
 			}
 		}
-	`
-
-	const Span = styled.div`
-		height: 2px;
 	`
 	const navArray = [
 		{ title: "Home", link: "/"  },
