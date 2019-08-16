@@ -4,13 +4,11 @@ import styled from 'styled-components';
 import diagonalArrow from '../assets/portfolio-icons/diagonal-arrow.svg'
 import { animated, useSpring } from 'react-spring'
 
-
 const CardWrapper = styled.div`
 	max-width: 960px;
 	margin: 0 auto;
 	padding: 32px 0em;
 `
-
 const CardHeader = styled.div`
 	& p:first-child {
 		display: flex;
@@ -25,17 +23,14 @@ const CardContent = styled.div`
 		align-itmes: center;
 	}
 `
-
 const Image = styled.div`
 	height: 300px;
 	width: 100%;
 	background-size: cover;
 `
-
 const HeaderSubheader = styled.div`
 	padding-bottom: 16px;
 `
-
 const LinkWrapper = styled(animated.div)`
 	padding-top: 16px;
 	& a { 
@@ -47,8 +42,6 @@ const LinkWrapper = styled(animated.div)`
 		margin-bottom: 0px;
 		height: 25px;
 	}
-
-
 `
 
 const ProjectCard = ({ project }) => {
@@ -65,7 +58,7 @@ const ProjectCard = ({ project }) => {
 			  </HeaderSubheader>
 			 </CardHeader>
 			 <CardContent>
-			 <iframe style="border: none;" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FXsFTUgVSeVzPFEnEaH2tWoRU%2FAgency-Website-Wireframes%3Fnode-id%3D0%253A1" allowfullscreen></iframe>
+				<Image style={{backgroundImage: `url(${project.imageOne})`}}></Image>
 			  <LinkWrapper
 	     	 	style={buttonAnimation}
 	     	 	onMouseEnter={() => setHovered(true)}
