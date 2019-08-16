@@ -65,7 +65,7 @@ const ProjectCard = ({ project }) => {
 			  </HeaderSubheader>
 			 </CardHeader>
 			 <CardContent>
-				<Image style={{backgroundImage: `url(${project.imageOne})`}}></Image>
+			 <iframe style="border: none;" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FXsFTUgVSeVzPFEnEaH2tWoRU%2FAgency-Website-Wireframes%3Fnode-id%3D0%253A1" allowfullscreen></iframe>
 			  <LinkWrapper
 	     	 	style={buttonAnimation}
 	     	 	onMouseEnter={() => setHovered(true)}
